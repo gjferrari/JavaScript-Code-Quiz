@@ -12,7 +12,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #6A5ACD;
 }
-.scoreboard, .start-button {
+
+.scoreboard, 
+.start-button,
+.q1-a,
+.q1-b,
+.q1-c,
+.q2-a,
+.q2-b,
+.q2-c,
+.q3-a,
+.q3-b,
+.q3-c,
+.q4-a,
+.q4-b,
+.q4-c{
     cursor: pointer;
 }
 .scoreboard {
@@ -47,4 +61,65 @@ button.start-button{
     border: none;
     border-radius: 15%;
     background-color: #FFFACD;
+}
+
+.page1, 
+.page2, 
+.page3, 
+.page4{
+    position:absolute;
+    padding: 40px 40px;
+    outline: 5px;
+    border: none;
+    border-radius: 5%;
+    background-color: #FFFACD;
+}
+
+.page1 {
+    display: none;
+}
+.page2 {
+    display: none;
+}
+
+.page3 {
+    display: none;
+}
+
+.page4{
+    display: none;
+}
+
+.question1,
+.question2,
+.question3,
+.question4 {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 10px 10px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #6A5ACD;
+    border-radius: 5%;
+}
+
+.q1-a,
+.q1-b,
+.q1-c,
+.q2-a,
+.q2-b,
+.q2-c,
+.q3-a,
+.q3-b,
+.q3-c,
+.q4-a,
+.q4-b,
+.q4-c{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 5px 5px;
+    background-color: #c7bce0;
+    /* add flexbox to space buttons  */
 }
