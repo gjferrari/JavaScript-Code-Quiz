@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>!JavaScript Quiz!</title>
 </head>
 <body>
-    <header><h1>JavaScript Quiz</h1>
-        <button class="start-button">Start</button>
+    <header><h1 class="JavaScript-Quiz">JavaScript Quiz</h1>
     </header>
-    <main>
-        <section>
-            <div class="timer">
-                <div class="timer-text"></div>
-                <div class ="countdown-text">60</div>
-                <h2>Seconds Remaining</h2>
+    <main class="content">
+         <!--Start Quiz Button-->
+         <div class="StartGame"> 
+            <button class="start-button">Start</button>
+         </div>
+        
+          <!--Timer-->
+        
+         <div class="timer">
+                <div class="timer-text">
+                    <h2 class="Total-Time">Total Time</h2>
+                    <div class ="countdown-text">60</div>
+                </div>
+        </div>
+        
+        <section class="quiz-pages">
+             <!--First Page -->
+            <div class ="page1">
             </div>
+            <!--Second Page -->
+            <div class ="page2">
+            </div>
+            <!--Third Page -->
+            <div class ="page3">
+            </div>
+            <!--Fourth Page -->
+            <div class ="page4">
+            </div>
+        </section>
+
+        <section class="Submit-Score">
+            <!--some sort of box here-->
         </section>
     </main>
 <script>scr="assets/js/app.js"</script>
