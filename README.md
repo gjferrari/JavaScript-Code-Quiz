@@ -10,7 +10,7 @@ so that the user can compare their progress with other players. When the user an
 - Clone with repository: https://github.com/gjferrari/JavaScript-Code-Quiz.git
   - git clone: git@github.com:gjferrari/JavaScript-Code-Quiz.git
 - Open Repo with VS Code or IDE of your choice
-- Open Index.html with Live Server to inspect Code or visit: https://gjferrari.github.io/password-generator/
+- Open Index.html with Live Server to inspect Code or visit: https://gjferrari.github.io/JavaScript-Code-Quiz/
 
 ## Mock-Up
 
