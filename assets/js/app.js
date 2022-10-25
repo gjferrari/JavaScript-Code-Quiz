@@ -1,3 +1,5 @@
+//NOTE FOR GRADER: JAVASCRIPT IS NOT CURRENTLY FUNCTIONAL, WILL BE WORKING WITH TUTOR FOR MY NEXT DRAFT
+
 // //Hooks into the DOM
 var startButton = document.querySelector(".start-button");
 // var startTimer = document.queryCommandValue(".countdown-text");
@@ -6,7 +8,7 @@ var time;
 var timerCount;
 
 // add event listeners for buttons
-const element = document.getElementById("start-button");
+const element = document.getElementsByClassName("start-button");
 element.addEventListener("click", startQuiz);
 
 //whent start-button is clicked, timer starts and first question appears (how?)
@@ -34,21 +36,48 @@ function startTimer() {
 
 function quizEnd() {}
 
+var questions = [
+  {
+    title: "What does an array store in JavaScript?",
+    choices: [
+      "a fixed-size collection of elements of the same data type",
+      "your hopes and dreams",
+      "only equality operators",
+    ],
+    answer: "a fixed-size collection of elements of the same data type",
+  },
+  {
+    title: "What function can be used to set a timer in Javascript?",
+    choices: [
+      "the setTimeout() method",
+      "the setInterval()method",
+      "both methods",
+    ],
+    answer: "both methods",
+  },
+  {
+    title: "The querySelector() method allows you to:",
+    choices: [
+      "select the first element that matches one or more CSS selectors",
+      "run a function in the Dom",
+      "find your one true love",
+    ],
+    answer: "both methods",
+  },
+  {
+    title: '"keyup", "keydown", and "keypress" are all examples of:',
+    choices: [
+      "Javasript elements",
+      "Javascript keyboard events",
+      "types of arrays",
+    ],
+    answer: "Javascript keyboard events",
+  },
+];
 
-
-// var questions = [
-//   {
-//     title: 'Commonly used data types DO NOT include:',
-//     choices: ['strings', 'booleans', 'alerts', 'numbers'],
-//     answer: 'alerts',
-//   },
-//   {
-//     title: 'The condition in an if / else statement is enclosed within ____.',
-//     choices: ['quotes', 'curly brackets', 'parentheses', 'square brackets'],
-//     answer: 'parentheses',
-//   },
-
-_________________________________________________________________________________________
+// var current question index ++
+// if statement
+_____________________________________________________________________;
 
 // // function myFunction() {
 // //   document.getElementById("demo").innerHTML = "Hello World";
