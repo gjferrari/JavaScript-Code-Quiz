@@ -1,24 +1,18 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <title>!JavaScript Quiz!</title>
+    <title>Javascript Code Quiz</title>
   </head>
   <body>
-    <header>
-      <h1 class="JavaScript-Quiz">JavaScript Quiz</h1>
-      <button class="scoreboard">View High Scores</button>
-    </header>
-    <main class="content">
-      <!--Start Quiz Button-->
-      <div class="StartGame">
-        <button class="start-button">Start</button>
-      </div>
-
-      <!--Timer-->
+    <main>
+      <header>
+        <h1 class="JavaScript-Quiz">JavaScript Quiz</h1>
+        <button class="scoreboard">View High Scores</button>
+        <h2 id="highscore" class="hide">Score</h2>
+      </header>
 
       <div class="timer">
         <div class="timer-text">
@@ -27,54 +21,22 @@
         </div>
       </div>
 
-      <!-- QUIZ PAGES: this code was written with the intent to have all quiz questions built into 
-    the html & CSS. Will be removing this code and will be working with questions in finished JS -->
+      <div class="StartGame">
+        <button id="start-button" class="button">Start</button>
+      </div>
 
-      <section class="quiz-pages">
-        <!--First Page -->
-        <div class="page1">
-          <h2 class="question1">What does an array store in JavaScript?</h2>
-          <button class="q1-a">
-            a fixed-size collection of elements of the same data type
-          </button>
-          <button class="q1-b">your hopes and dreams</button>
-          <button class="q1-c">only equality operators</button>
+      <div class="container">
+        <div id="questionBlock" class="hide">
+          <div id="question">Question</div>
+          <div id="answerblock">
+            <button id="a1" class="button">1</button>
+            <button id="a2" class="button">2</button>
+            <button id="a3" class="button">3</button>
+          </div>
         </div>
-        <!--Second Page -->
-        <div class="page2">
-          <h2 class="question2">
-            What function can be used to set a timer in Javascript?
-          </h2>
-          <button class="q2-a">the setTimeout() method</button>
-          <button class="q2-b">the setInterval()method</button>
-          <button class="q2-c">both methods</button>
-        </div>
-        <!--Third Page -->
-        <div class="page3">
-          <h2 class="question3">
-            "keyup", "keydown", and "keypress" are all examples of:
-          </h2>
-          <button class="q3-a">Javasript elements</button>
-          <button class="q3-b">Javascript keyboard events</button>
-          <button class="q3-c">types of arrays</button>
-        </div>
-        <!--Fourth Page -->
-        <div class="page4">
-          <h2 class="question4">The querySelector() method allows you to:</h2>
-          <button class="q4-a">
-            select the first element that matches one or more CSS selectors
-          </button>
-          <button class="q4-b">run a function in the Dom</button>
-          <button class="q4-c">find your one true love</button>
-        </div>
-      </section>
-
-      <div class="results"></div>
-
-      <section class="Submit-Score">
-        <!--some sort of box here-->
-      </section>
+      </div>
     </main>
-    <script src="./assets/js/app.js"></script>
   </body>
 </html>
+
+<!-- https://stackoverflow.com/questions/6242976/javascript-hide-show-element -->
