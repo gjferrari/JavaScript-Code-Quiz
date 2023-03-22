@@ -79,13 +79,24 @@ const createQuiz = (qIndex) => {
     const userChoice = questions[qIndex].choices;
     quizContent.textContent = userQuestion;
   }
-  userChoice.forEach(function (newChoice){
+  userChoice.forEach(function (newChoice) {
     const listEl = document.createElement("li");
     listEl.textContent = newChoice;
-    quizContent.appendChild(createUl)
-
-  })
+    quizContent.appendChild(createUl);
+    createUl.appendChild(listEl);
+    listEl.addEventListener("click");
+  });
 };
+
+//new function for finding correct answer
+const getRightAnswer = (event) => {
+  var el = event.target;
+  if (el.matches("li")) {
+    var createDivEl = document.createElement("div");
+    createDivEl.setAttribute("id", "createDivID");
+  }
+};
+
 // const questions = [
 //   {
 //     question: "What does an array store in JavaScript?",
