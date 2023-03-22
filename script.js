@@ -47,15 +47,16 @@ var questions = [
 ];
 
 const score = 0;
-const questionList = 0;
+const qIndex = 0;
 
 //connection to html
 const timer = document.getElementById("#timer");
 const mainBlock = document.getElementById("#mainBlock");
 const quizContent = document.getElementById("#quizContent");
 const startButton = document.getElementById("start-button");
-
+const createUl = document.createElement("ul");
 //60 second quiz
+
 function startTimer() {
   time = 60;
   setTimeout(function () {
@@ -70,10 +71,21 @@ function startTimer() {
   }
 }
 
+const createQuiz = (qIndex) => {
+  quizContent.innerHTML = "";
+  createUl = document.createElement("ul");
+  for (let index = 0; index < questions.length; index++) {
+    const userQuestion = questions[qIndex].title;
+    const userChoice = questions[qIndex].choices;
+    quizContent.textContent = userQuestion;
+  }
+  userChoice.forEach(function (newChoice){
+    const listEl = document.createElement("li");
+    listEl.textContent = newChoice;
+    quizContent.appendChild(createUl)
 
-const createQuiz = (questionList) =>{
-  
-}
+  })
+};
 // const questions = [
 //   {
 //     question: "What does an array store in JavaScript?",
