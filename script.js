@@ -1,4 +1,3 @@
-const startButton = document.getElementById("start-button");
 const scoreButton = document.getElementById("score-button");
 const questionBlock = document.getElementById("questionBlock");
 
@@ -51,8 +50,30 @@ const score = 0;
 const questionList = 0;
 
 //connection to html
-const mainBlock = document.querySelector("#mainBlock");
+const timer = document.getElementById("#timer");
+const mainBlock = document.getElementById("#mainBlock");
+const quizContent = document.getElementById("#quizContent");
+const startButton = document.getElementById("start-button");
 
+//60 second quiz
+function startTimer() {
+  time = 60;
+  setTimeout(function () {
+    clocktick();
+  }, 1000);
+  function clocktick() {
+    time--;
+    if (time <= 0) {
+      quizEnd();
+    }
+    timerElement.textContent = time;
+  }
+}
+
+
+const createQuiz = (questionList) =>{
+  
+}
 // const questions = [
 //   {
 //     question: "What does an array store in JavaScript?",
@@ -108,25 +129,11 @@ startButton.addEventListener("click", startQuiz);
 //whent start-button is clicked, timer starts and first question appears (how?)
 // startQuiz();
 
-function startQuiz() {
-  isWin = false;
-  timerCount = 10;
-  startTimer();
-}
-
-function startTimer() {
-  time = 60;
-  setTimeout(function () {
-    clocktick();
-  }, 1000);
-  function clocktick() {
-    time--;
-    if (time <= 0) {
-      quizEnd();
-    }
-    timerElement.textContent = time;
-  }
-}
+// function startQuiz() {
+//   isWin = false;
+//   timerCount = 10;
+//   startTimer();
+// }
 
 //https://stackoverflow.com/questions/72588081/working-on-a-javascript-quiz-app-and-having-an-issue-dynamically-generating-ques
 
