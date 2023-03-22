@@ -57,19 +57,19 @@ const startButton = document.getElementById("start-button");
 const createUl = document.createElement("ul");
 //60 second quiz
 
-function startTimer() {
-  time = 60;
-  setTimeout(function () {
-    clocktick();
-  }, 1000);
-  function clocktick() {
-    time--;
-    if (time <= 0) {
-      quizEnd();
-    }
-    timerElement.textContent = time;
-  }
-}
+// function startTimer() {
+//   time = 60;
+//   setTimeout(function () {
+//     clocktick();
+//   }, 1000);
+//   function clocktick() {
+//     time--;
+//     if (time <= 0) {
+//       quizEnd();
+//     }
+//     timerElement.textContent = time;
+//   }
+// }
 
 const createQuiz = (qIndex) => {
   quizContent.innerHTML = "";
@@ -113,7 +113,9 @@ const getRightAnswer = (event) => {
   quizContent.appendChild(createDivEl);
 };
 
-
+function quizEnd() {
+  createQuiz.innerHTML = "";
+}
 // const questions = [
 //   {
 //     question: "What does an array store in JavaScript?",
