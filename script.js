@@ -3,10 +3,6 @@ const scoreButton = document.getElementById("score-button");
 const questionBlock = document.getElementById("questionBlock");
 
 const question = document.getElementById("question");
-const li1 = document.createElement("li");
-const li2 = document.createElement("li");
-const li3 = document.createElement("li");
-const li4 = document.createElement("li");
 const highScoresEl = document.createElement("ul");
 // let answer1 = document.getElementById("a1");
 // let answer2 = document.getElementById("a2");
@@ -50,6 +46,13 @@ var questions = [
     answer: "Javascript keyboard events",
   },
 ];
+
+const score = 0;
+const questionList = 0;
+
+//connection to html
+const mainBlock = document.querySelector("#mainBlock");
+
 // const questions = [
 //   {
 //     question: "What does an array store in JavaScript?",
