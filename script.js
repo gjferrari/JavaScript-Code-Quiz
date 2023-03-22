@@ -76,26 +76,43 @@ const createQuiz = (qIndex) => {
   createUl = document.createElement("ul");
   for (let index = 0; index < questions.length; index++) {
     const userQuestion = questions[qIndex].title;
-    const userChoice = questions[qIndex].choices;
+    // const userChoice = questions[qIndex].choices;
     quizContent.textContent = userQuestion;
   }
+  const userChoice = questions[qIndex].choices;
   userChoice.forEach(function (newChoice) {
     const listEl = document.createElement("li");
     listEl.textContent = newChoice;
     quizContent.appendChild(createUl);
     createUl.appendChild(listEl);
-    listEl.addEventListener("click");
+    listEl.addEventListener("click", getRightAnswer);
   });
 };
 
 //new function for finding correct answer
+//https://www.w3schools.com/jsref/prop_node_textcontent.asp
 const getRightAnswer = (event) => {
   var el = event.target;
   if (el.matches("li")) {
     var createDivEl = document.createElement("div");
     createDivEl.setAttribute("id", "createDivID");
+    if (el.textContent == questions[qIndex].answer) {
+      createDivEl.textContent = "Correct! Wow - you are amazing!";
+    } else {
+      createDivEl.textContent = "Wrong";
+    }
   }
+  qIndex++;
+
+  if (qIndex >= questions.length) {
+    quizEnd();
+    createDivEl.textContent = "Quiz Over!";
+  } else {
+    createQuiz(qIndex);
+  }
+  quizContent.appendChild(createDivEl);
 };
+
 
 // const questions = [
 //   {
