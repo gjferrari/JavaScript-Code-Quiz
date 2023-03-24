@@ -115,7 +115,14 @@ const getRightAnswer = (event) => {
 
 function quizEnd() {
   createQuiz.innerHTML = "";
+
+  const createH1El = document.createElement("h1");
+  createH1El.setAttribute("id", "createH1El");
+  createH1El.textContent = "Quiz Over!";
+
+  createQuiz.appendChild(createH1El);
 }
+
 // const questions = [
 //   {
 //     question: "What does an array store in JavaScript?",
