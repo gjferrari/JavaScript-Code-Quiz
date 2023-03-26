@@ -3,9 +3,6 @@ const questionBlock = document.getElementById("questionBlock");
 
 const question = document.getElementById("question");
 const highScoresEl = document.createElement("ul");
-// let answer1 = document.getElementById("a1");
-// let answer2 = document.getElementById("a2");
-// let answer3 = document.getElementById("a3");
 
 var questions = [
   {
@@ -113,14 +110,22 @@ const getRightAnswer = (event) => {
   quizContent.appendChild(createDivEl);
 };
 
+//code to generate html/classes
 function quizEnd() {
-  createQuiz.innerHTML = "";
+  quizContent.innerHTML = "";
 
   const createH1El = document.createElement("h1");
   createH1El.setAttribute("id", "createH1El");
   createH1El.textContent = "Quiz Over!";
 
-  createQuiz.appendChild(createH1El);
+  quizContent.appendChild(createH1El);
+
+  var createPEl = document.createElement("p");
+  createPEl.setAttribute("id", "createPEl");
+
+  quizContent.appendChild(createPEl);
+
+  //will need to add timer function
 }
 
 // const questions = [
