@@ -125,6 +125,14 @@ function quizEnd() {
 
   quizContent.appendChild(createPEl);
 
+  // SUBMIT BUTTON
+  var submitButton = document.createElement("button");
+  submitButton.setAttribute("type", "submit");
+  submitButton.setAttribute("id", "Submit-Button");
+  submitButton.textContent = "Submit Score";
+
+  quizContent.appendChild(submitButton);
+
   //will need to add timer function
 }
 
